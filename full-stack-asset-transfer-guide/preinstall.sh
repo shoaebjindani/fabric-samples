@@ -33,3 +33,8 @@ source ./setenvvariables.sh
 just kind
 
 just console
+
+
+
+echo "Run this below command to port forward"
+echo "ssh -L 7443:localhost:443 root@<IP Goes Here>"
