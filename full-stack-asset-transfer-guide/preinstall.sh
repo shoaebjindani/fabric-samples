@@ -27,3 +27,5 @@ npm install -g @hyperledger-labs/weft
 
 
 source ./setenvvariables.sh
+
+./check.sh
