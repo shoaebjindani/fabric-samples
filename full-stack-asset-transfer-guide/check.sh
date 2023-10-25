@@ -68,30 +68,30 @@ else
 fi
 
 # Install k9s
-K9S_VERSION=0.25.3
-if ! command -v k9s &> /tmp/cmdpath
-then
-  echo "${WARN} Please install k9s; suggested install commands:"
-  echo
-  if [ $(uname -s) = Darwin ]; then
-    if [ $(uname -m) = arm64 ]; then
-      echo "curl --fail --silent --show-error -L https://github.com/derailed/k9s/releases/download/v${K9S_VERSION}/k9s_Darwin_arm64.tar.gz -o /tmp/k9s_Darwin_arm64.tar.gz"
-      echo "tar -zxf /tmp/k9s_Darwin_arm64.tar.gz -C /usr/local/bin k9s"
-    else
-      echo "curl --fail --silent --show-error -L https://github.com/derailed/k9s/releases/download/v${K9S_VERSION}/k9s_Darwin_x86_64.tar.gz -o /tmp/k9s_Darwin_x86_64.tar.gz"
-      echo "tar -zxf /tmp/k9s_Darwin_x86_64.tar.gz -C /usr/local/bin k9s"
-    fi
-  else
-    echo "curl --fail --silent --show-error -L https://github.com/derailed/k9s/releases/download/v${K9S_VERSION}/k9s_Linux_x86_64.tar.gz -o /tmp/k9s_Linux_x86_64.tar.gz"
-    echo "tar -zxf /tmp/k9s_Linux_x86_64.tar.gz -C /usr/local/bin k9s"
-  fi
-  echo "sudo chown root /usr/local/bin/k9s"
-  echo "sudo chmod 755 /usr/local/bin/k9s"
-  echo
-  EXIT=1
-else
-  echo -e "${SUCCESS} k9s found:\t\t$(cat /tmp/cmdpath)"
-fi
+# K9S_VERSION=0.25.3
+# if ! command -v k9s &> /tmp/cmdpath
+# then
+#   echo "${WARN} Please install k9s; suggested install commands:"
+#   echo
+#   if [ $(uname -s) = Darwin ]; then
+#     if [ $(uname -m) = arm64 ]; then
+#       echo "curl --fail --silent --show-error -L https://github.com/derailed/k9s/releases/download/v${K9S_VERSION}/k9s_Darwin_arm64.tar.gz -o /tmp/k9s_Darwin_arm64.tar.gz"
+#       echo "tar -zxf /tmp/k9s_Darwin_arm64.tar.gz -C /usr/local/bin k9s"
+#     else
+#       echo "curl --fail --silent --show-error -L https://github.com/derailed/k9s/releases/download/v${K9S_VERSION}/k9s_Darwin_x86_64.tar.gz -o /tmp/k9s_Darwin_x86_64.tar.gz"
+#       echo "tar -zxf /tmp/k9s_Darwin_x86_64.tar.gz -C /usr/local/bin k9s"
+#     fi
+#   else
+#     echo "curl --fail --silent --show-error -L https://github.com/derailed/k9s/releases/download/v${K9S_VERSION}/k9s_Linux_x86_64.tar.gz -o /tmp/k9s_Linux_x86_64.tar.gz"
+#     echo "tar -zxf /tmp/k9s_Linux_x86_64.tar.gz -C /usr/local/bin k9s"
+#   fi
+#   echo "sudo chown root /usr/local/bin/k9s"
+#   echo "sudo chmod 755 /usr/local/bin/k9s"
+#   echo
+#   EXIT=1
+# else
+#   echo -e "${SUCCESS} k9s found:\t\t$(cat /tmp/cmdpath)"
+# fi
 
 # Install just
 JUST_VERSION=1.2.0
