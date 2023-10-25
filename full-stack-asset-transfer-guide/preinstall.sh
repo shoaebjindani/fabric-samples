@@ -14,13 +14,7 @@ sudo apt install jq -y
 
 #Installs Fabric
 curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh | bash -s -- binary
-export WORKSHOP_PATH=$(pwd)
-export PATH=${WORKSHOP_PATH}/bin:$PATH
-export FABRIC_CFG_PATH=${WORKSHOP_PATH}/config
 
-# Set Ingress domain and namespace name
-export WORKSHOP_INGRESS_DOMAIN=localho.st
-export WORKSHOP_NAMESPACE=test-network
 
 #Installs Node
 sudo snap install node --classic
@@ -30,3 +24,6 @@ snap install docker
 
 #Install Weft
 npm install -g @hyperledger-labs/weft
+
+
+source ./setenvvariables.sh
