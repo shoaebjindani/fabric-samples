@@ -25,6 +25,7 @@ snap install docker
 #Install Weft
 npm install -g @hyperledger-labs/weft
 
+./setdockersecret.sh
 
 source ./setenvvariables.sh
 
